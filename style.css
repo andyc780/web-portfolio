@@ -1,0 +1,45 @@
+*{
+    font-family: "League Spartan", serif;
+}
+body{
+    background-color:#171717;
+    /* background-color: #F9F6EE; */ 
+    cursor:none;
+}
+.main-site{
+    margin:auto;
+    max-width: 70rem;
+}
+.gradient{
+    text-align: center;
+    font-size:50px;
+    margin: auto;
+    margin-top:100px;
+    /* text shadow, first is pixels right, second is pixels down, third is the blur radius in pixels. then the color is what the shadow color will be, the white adds a litle cool glow effect. */
+    text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.15); 
+    /* makes the text color have a gradient that transitions from a dark blue to a purple color. */
+    background: -webkit-linear-gradient(right,#af0af6, #0adbf2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+p{
+    font-weight: bold;
+    font-size:20px;
+    /* color:#555 */
+    color:#bbb;
+}
+.mint{
+    color:#8bd3ad;  
+}
+#circle {
+    /* making sure that circle can be anywhere on the webpage so absolute positioning :thumbs up: */
+    position: absolute;
+    /* same width and height to create a square and then turn it into a circle later on. */
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%; /* smooth the square into a circle */
+    /* background: rgb(205,122,240); */
+    background: rgb(194,27,212);
+    background: radial-gradient(circle, rgba(194,27,212,0.5) 0%, rgba(23,23,23, 0) 60%);
+    transform: translate(-50%, -50%); /* center this stupid circle to the middle of the cursor because it will be ugly without it. */
+}
