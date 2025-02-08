@@ -8,10 +8,15 @@ document.addEventListener('mousemove', function (cursor) {
     // getting positions of where the mouse is, split into x and y coordinates, no clue js does this but it's cool!!
     const positionX = cursor.clientX;
     const positionY = cursor.clientY;
+    const positionScrollY = window.scrollY;
+    updatePosition(positionX, positionY, positionScrollY)
 
-
+    
     // using left and right positioning because of the position absolute from the circle ID from the css and now we got cool mouse effects
-    circle.style.left = `${positionX}px`;
-    circle.style.top = `${positionY}px`;
-});
+   function updatePosition(positionX, positionY, positionScrollY){
+        circle.style.left = `${positionX}px`;
+        circle.style.top = `${positionY + positionScrollY}px`;
+    }
 
+});
+ 

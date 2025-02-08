@@ -1,20 +1,81 @@
 *{
     font-family: "League Spartan", serif;
+    margin: auto;
+    padding:0;
+    color:whitesmoke;
 }
 body{
     background-color:#171717;
-    overflow: hidden;   
+    overflow: auto;
+    margin: auto;
     /* background-color: #F9F6EE; */ 
 }
-.main-site{
+.nav{
+    position: fixed;
+    height:80px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
     margin:auto;
+    background-color: #252525;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: slideTopAndFade 3.5s forwards; /*forwards keeps the final position of the navbar*/
+}
+.nav > a{
+    color: white;
+    font-weight:bold;
+    text-decoration: none;
+    border:2px solid skyblue;
+    padding:16px;
+    border-radius:12px;
+    transition: background-color 1s ease;
+
+}
+.nav > a:hover{
+    background-color:rgba(0, 250, 154, 0.49);
+}
+
+@keyframes slideTopAndFade{
+    0%{
+        top:-100px;
+        opacity: 0;
+    }
+    100%{
+        top:0;
+        opacity: 1;
+    }
+}
+main{
+    margin: auto;
     max-width: 70rem;
+    border-left:2px solid purple;
+    border-right: 2px solid purple;
+}
+.intro-body{
+    display: flex;
+    justify-content: space-around;
+}
+.introduction{
+    max-width: 40%;
+}
+img{    
+    height:300px;
+    width:300px;
+    border-radius:50%;
+    border: 4px solid skyblue;
+    box-shadow: 0px 0px 50px rgba(255,255,255, 0.25);
+}
+.intro-images{
+    max-width: 45%;
+    margin-top:200px;
 }
 .gradient{
     text-align: center;
     font-size:50px;
     margin: auto;
-    margin-top:100px;
+    margin-top:200px;
     /* text shadow, first is pixels right, second is pixels down, third is the blur radius in pixels. then the color is what the shadow color will be, the white adds a litle cool glow effect. */
     text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.15); 
     /* makes the text color have a gradient that transitions from a dark blue to a purple color. */
@@ -26,7 +87,7 @@ p{
     font-weight: bold;
     font-size:20px;
     /* color:#555 */
-    color:#bbb;
+    color:#aaa;
 }
 .mint{
     color:#8bd3ad;  
