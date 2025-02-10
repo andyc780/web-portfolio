@@ -2,13 +2,19 @@
     font-family: "League Spartan", serif;
     margin: auto;
     padding:0;
-    color:whitesmoke;
+}
+h1{
+    font-size:45px;
+    color:#bbb;
 }
 body{
     background-color:#171717;
     overflow: auto;
     margin: auto;
     /* background-color: #F9F6EE; */ 
+}
+.title-text{
+    font-size:25px;
 }
 .nav{
     position: fixed;
@@ -34,7 +40,7 @@ body{
 
 }
 .nav > a:hover{
-    background-color:rgba(0, 250, 154, 0.49);
+    background-color: #8bd3adb3;
 }
 
 @keyframes slideTopAndFade{
@@ -58,9 +64,10 @@ main{
     justify-content: space-around;
 }
 .introduction{
+    margin-top: 200px;
     max-width: 40%;
 }
-img{    
+.profile-pic{    
     height:300px;
     width:300px;
     border-radius:50%;
@@ -73,7 +80,7 @@ img{
 }
 .gradient{
     text-align: center;
-    font-size:50px;
+    font-size:45px;
     margin: auto;
     margin-top:200px;
     /* text shadow, first is pixels right, second is pixels down, third is the blur radius in pixels. then the color is what the shadow color will be, the white adds a litle cool glow effect. */
@@ -92,6 +99,58 @@ p{
 .mint{
     color:#8bd3ad;  
 }
+.accomplish{
+    text-align: center;
+    margin-top: 150px;
+    color:#8bd3ad;
+}
+.quick-achievements{
+    display: flex;
+    justify-content: space-evenly;
+    margin:5px;
+    padding:5px;
+   
+}
+.box{
+    background-color: #ccc;
+    margin: 20px;
+    padding:20px;
+    border-radius:20px;
+    box-shadow: 0px 0px 25px rgba(255,255,255, 0.25);
+
+}
+.box > h2{
+    text-align:center;
+    text-decoration: underline;
+    margin-bottom:20px;
+}
+.box > img{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height:100px;
+
+}
+.box > p{
+    color:#444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #circle {
     /* making sure that circle can be anywhere on the webpage so absolute positioning :thumbs up: */
     position: absolute;
