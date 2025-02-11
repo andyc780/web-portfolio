@@ -5,54 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smooth Radial Gradient Color Change on Hover</title>
   <style>
-  body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+ /* Default Styles - Desktop */
+.navbar-links {
+    display: flex;
+    justify-content: space-around;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
+.navbar-toggle {
+    display: none;
 }
 
-.left {
-  color: white;
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .navbar-links a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 30px;  
+        cursor: pointer;
+    }
 }
 
-.center-gap {
-  flex-grow: 1;  /* This makes the gap grow and push the left and right elements apart */
-}
-
-.right {
-  display: flex;
-  justify-content: space-between; /* Items in the right section will be spaced apart */
-}
-
-.right-item {
-  color: white;
-  padding: 10px;
-}
-
-.right-item:hover {
-  background-color: #555;
-}
 
   </style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="left">Left Element</div>
-    <div class="center-gap"></div>
-    <div class="right">
-      <div class="right-item">Item 1</div>
-      <div class="right-item">Item 2</div>
-      <div class="right-item">Item 3</div>
-      <div class="right-item">Item 4</div>
+  <nav>
+    <div class="navbar">
+        <img src="/images/logo.png" alt="Logo Image" href="index.html" class="logo">
+        <div class="center-gap"></div>
+
+        <!-- Button for mobile view -->
+        <button class="navbar-toggle" id="navbar-toggle">
+            ☰
+        </button>
+
+        <!-- Links container -->
+        <div class="navbar-links" id="navbar-links">
+            <a href="#">About</a>
+            <a href="#">Achievements</a>
+            <a href="#contact-navigate">Contact Information</a>
+            <a href="#">Resume</a>
+        </div>
     </div>
-  </nav>
+</nav>
+
   
 
 </body>

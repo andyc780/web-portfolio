@@ -15,6 +15,9 @@ body{
 .title-text{
     font-size:25px;
 }
+.navbar-mobile{
+    display: none;
+}
 nav{
     position: fixed;
     height:80px;
@@ -35,6 +38,14 @@ nav > .navbar {
    justify-content: space-evenly;
     max-width: 70rem;  
     width: 100%;
+}
+.center-gap{
+    flex-grow: 0.75;
+}
+.logo{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
 }
 .navbar > a{
     color: white;
@@ -244,6 +255,10 @@ button{
     border-radius:0.5rem;
     border:2px solid #8bd3ad;
     margin-top:15px;
+    transition: background-color 0.75s ease;
+}
+button:hover{
+    background-color:rgba(240, 226, 147, 0.925);
 }
 input::placeholder{
     color:#ccc;
@@ -289,5 +304,93 @@ footer{
     transform: translate(-50%, -50%); /* center this stupid circle to the middle of the cursor because it will be ugly without it. subtracting width and height to make it centered. */
     z-index: -1;
 }
+@media (max-width:980px){
+    .quick-achievements{
+        display: flex;
+        flex-wrap:wrap;
+        max-width: 50%;
+        margin: auto;
+    }
+    .contact{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .message textarea{
+        display: flex;
+        width: 250px;
+    }
+    .personal-details input {
+        display: flex;
+        width: 250px;
+    }
+}
+@media (max-width:570px){
+    html{
+        max-width: 100%;
+    }
 
+    /* nav{
+        display: none;
+
+    }
+    .navbar-mobile{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        color:whitesmoke
+    } */
+
+    .profile-pic{
+        height:200px;
+        width: 200px;
+        margin-top:5.5rem;
+    }
+    .quick-achievements{
+        max-width: 80%;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .personal-details{
+        margin: auto;
+    }
+    .message{
+        margin: auto;
+    }
+
+}
+@media (max-width:500px){
+    *   {
+        max-width: 100%;
+    }
+    .intro-body{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .introduction{
+        max-width: 90%;
+        margin: auto;
+        margin-top: 100px;
+    }
+    .intro-images{
+        max-width: 90%;
+        margin: auto;
+    }
+    .profile-pic{
+        margin-top: 50px;
+        width: 250px;
+        height: 250px;
+    }
+    .personal-details{
+        margin: auto;
+    }
+    .message{
+        margin:auto;
+    }
+    .contact{
+        margin:0;
+    }
+}
 
