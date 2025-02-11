@@ -2,28 +2,37 @@
     font-family: "League Spartan", serif;
     margin: auto;
     padding:0;
-    color:whitesmoke;
+    color:#ccc;
 }
 body{
     background-color:#171717;
-    overflow: auto;
+    overflow-x:hidden;
+    overflow-y:auto;
     margin: auto;
     /* background-color: #F9F6EE; */ 
 }
-.nav{
+
+nav{
     position: fixed;
     height:80px;
-    max-width: 100%;
     width: 100%;
-    text-align: center;
+    opacity: 0;
     margin:auto;
     background-color: #252525;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    animation: slideTopAndFade 3.5s forwards; /*forwards keeps the final position of the navbar*/
+    animation-delay: 5s;
+    animation: slideTopAndFade 3s 0.5s forwards; /* slideTopAndFade is the keyframes function stuff, 3s is the time for the whole animation, 0.5s is the delay before it starts, and forwards makes the final product stay.*/
 }
-.nav > a{
+/* giving the inside links a max width that matches the main max width (70rem) */
+nav > .navbar {
+   display: flex;
+   justify-content: space-evenly;
+    max-width: 70rem;  
+    width: 100%;
+}
+.navbar > a{
     color: white;
     font-weight:bold;
     text-decoration: none;
@@ -33,7 +42,7 @@ body{
     transition: background-color 1s ease;
 
 }
-.nav > a:hover{
+.navbar > a:hover{
     background-color:rgba(0, 250, 154, 0.49);
 }
 
@@ -50,8 +59,8 @@ body{
 main{
     margin: auto;
     max-width: 70rem;
-    border-left:2px solid purple;
-    border-right: 2px solid purple;
+    border-left:2px solid rgba(128, 0, 128, 0.1);
+    border-right: 2px solid rgba(128, 0, 128, 0.1);
 }
 .intro-body{
     display: flex;
