@@ -1,37 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TESTING elements</title>
-    <style>
- /* Style for the box */
-.box {
-  width: 200px; /* Width of the box */
-  height: 200px; /* Height of the box */
-  background-color: #171717; /* Initial background color (black) */
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 16px;
-  border-radius: 10px; /* Optional rounded corners */
-  transition: background-color 1s ease; /* Smooth background color transition */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Radial Gradient Color Change on Hover</title>
+  <style>
+ /* Default Styles - Desktop */
+.navbar-links {
+    display: flex;
+    justify-content: space-around;
 }
 
-/* Hover effect */
-.box:hover {
-  background-color: #FFD700; /* Change to this color when hovered */
+.navbar-toggle {
+    display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .navbar-links a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 30px;  
+        cursor: pointer;
+    }
 }
 
 
-    </style>
+  </style>
 </head>
 <body>
-    <div class="box">
-        hover over me!!!!
-      </div>
-          
+
+  <nav>
+    <div class="navbar">
+        <img src="/images/logo.png" alt="Logo Image" href="index.html" class="logo">
+        <div class="center-gap"></div>
+
+        <!-- Button for mobile view -->
+        <button class="navbar-toggle" id="navbar-toggle">
+            ☰
+        </button>
+
+        <!-- Links container -->
+        <div class="navbar-links" id="navbar-links">
+            <a href="#">About</a>
+            <a href="#">Achievements</a>
+            <a href="#contact-navigate">Contact Information</a>
+            <a href="#">Resume</a>
+        </div>
+    </div>
+</nav>
+
+  
+
 </body>
 </html>
