@@ -1,3 +1,6 @@
+
+/* NOTE: ignore the css file as well, it is not tied with the final product as this was used for brainstorming/planning and will changed to tailwind later */
+
 *{
     font-family: "League Spartan", serif;
     scroll-behavior: smooth; /*allow for smooth scrolling all over the site, mainly for the contact link*/
@@ -304,10 +307,6 @@ footer{
 .links a:hover{
     color:#999;
 }
-
-
-
-
 #circle {
     /* making sure that circle can be anywhere on the webpage so absolute positioning :thumbs up: */
     position: absolute;

@@ -1,3 +1,5 @@
+// *** NOTE: for the regular html, not the for the final product. mainly used for the circle effect and stuff. ***
+
 // bane of all my pain is in javascript html, why do i do this to myself, constantly googling for solutions on w3 and mdn web docs...
 
 // because i'm going to forget what the addeventlistener does, it's basically like "hey this thing happened, now do this code inside the arrow function please."
