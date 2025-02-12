@@ -19,4 +19,3 @@ document.addEventListener('mousemove', function (cursor) {
     }
 
 });
- 

@@ -17,7 +17,19 @@ body{
 }
 .navbar-mobile{
     display: none;
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+    color:#ddd;
+    background-color: #333;
+    border:none;
+    transition: background-color 1s ease, color 1s ease;
 }
+.navbar-mobile:hover{
+    background-color: #555;
+    color:#eee;
+}
+
 nav{
     position: fixed;
     height:80px;
@@ -76,6 +88,8 @@ nav > .navbar {
 main{
     margin: auto;
     max-width: 70rem;
+    /* border-right:1px solid rgba(0, 255, 128, 0.1);
+    border-left:1px solid rgba(0, 255, 128, 0.1); */
 }
 .intro-body{
     display: flex;
@@ -206,6 +220,8 @@ p{
     justify-content: center;
     width:100%;
     height:200px;
+    border:2px solid #ddd;
+    border-radius: 15px;
 
 
 }
@@ -245,7 +261,7 @@ p{
     color:#ccc;
     resize: none;
 }
-button{
+.submit{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,7 +273,7 @@ button{
     margin-top:15px;
     transition: background-color 0.75s ease;
 }
-button:hover{
+.submit:hover{
     background-color:rgba(240, 226, 147, 0.925);
 }
 input::placeholder{
@@ -328,17 +344,24 @@ footer{
     html{
         max-width: 100%;
     }
-
-    /* nav{
+    nav > .navbar{
+        max-width: 100%;
+    }
+    .navbar > a{
         display: none;
-
+    }
+    .navbar > img{
+        display: none;
     }
     .navbar-mobile{
-        display: block;
-        justify-content: center;
+        display: flex;
         align-items: center;
-        color:whitesmoke
-    } */
+        justify-content: center;
+        position: absolute;
+        left:50%;
+        transform:translateX(-50%); /* moved back 50% of it's own length */
+    }
+    
 
     .profile-pic{
         height:200px;
@@ -361,7 +384,7 @@ footer{
 
 }
 @media (max-width:500px){
-    *   {
+    html{
         max-width: 100%;
     }
     .intro-body{
