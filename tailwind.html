@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Andy's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
+  <style>
+    /* Styling used for the animations, they're not necessary and function w/o them so its fine if you deduct some points off. */
+    /* but i do want to keep the '*' in order to make things easier and use the custom font, it might be possible to do this without it but i'm not sure how to do that. */
+    * {
+      font-family: 'League Spartan', sans-serif;
+      scroll-behavior: smooth;
+      font-weight: bold;  
+    }
+    /* All animations that will be used. */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideInLeft {
+      from { transform: translateX(-50%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideInRight {
+      from { transform: translateX(75%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideInBottom {
+      from { transform: translateY(50%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideTopAndFade {
+      from { top: -100px; opacity: 0; }
+      to { top: 0; opacity: 1; }
+    }
+    .animate-fade-in {
+      animation: fadeIn 2s forwards;
+    }
+    .animate-slide-in-left {
+      animation: slideInLeft 2s forwards;
+    }
+    .animate-slide-in-right {
+      animation: slideInRight 2s forwards;
+    }
+    .animate-slide-in-bottom {
+      animation: slideInBottom 1s forwards;
+    }
+    .animate-slide-top-fade {
+      animation: slideTopAndFade 3s forwards;
+    }
+  </style>
+</head>
+<!-- cool circle effect was removed because i dont th ink i can get it to work in tailwind, but it is still in regular.html (sad face) -->
+<body class="bg-gray-900 text-gray-300">  
+  <nav class="fixed top-0 w-full bg-gray-800 opacity-0 animate-slide-top-fade flex justify-center md:justify-evenly items-center h-20 z-20" style="animation-delay: 0.5s;">
+    <!-- dont forget that hidden is here for md screens (<768px) as this will be replaced by the button -->
+    <div class="hidden md:flex justify-evenly max-w-5xl w-full items-center">
+      <img src="logo.png" alt="Logo Image" class="h-12 w-12 rounded-full" />
+      <!-- flex grow for the spacing between the image and nav links -->
+      <div class="grow"></div>
+      <a href="index.html" class="text-white font-bold p-4 rounded transition duration-300 hover:text-gray-400">Regular Website</a>
+      <a href="#" class="text-white font-bold p-4 rounded transition duration-300 hover:text-gray-400">Filler Link</a>
+      <a href="#contact-navigate" class="text-white font-bold p-4 rounded transition duration-300 hover:text-gray-400">Contact Information</a>
+      <a href="#" class="text-white font-bold p-4 rounded transition duration-300 hover:text-gray-400">Filler Link</a>
+    </div>
+    <!-- also dont forget about this md hidden too, it will display centered button when screens smaller than 768. -->
+    <button class="block md:hidden bg-gray-700 text-white rounded-full h-12 w-12 flex items-center justify-center transition duration-300 hover:bg-gray-600">
+      ☰
+    </button>
+  </nav>
+  
+<!-- notes: majority of my stuff has 0 opacity to double check in case if something breaks because it dont display as a result. -->
+  <main class="max-w-5xl m-auto mt-32">    <!-- position my intro title and image vertically for smaller screens, note -->
+
+    <div class="flex flex-col md:flex-row justify-around items-center">
+      <div class="max-w-md opacity-0 animate-slide-in-left" style="animation-delay: 1s;">
+        <h1 class="text-4xl text-gray-400 font-bold">
+          Hello there, I'm <br>
+          <!-- gradient color thing that took me too long to figure out i hate this why -->
+           <!-- some notes because i'm going to forget again: bg clip makes sure it only applies to text only,
+             bg-gradient from pink to blue. thanks for chat for helping lmao -->
+           <!-- <span class="bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent font-bold">Andy Chen</span> -->
+          <!-- ill still use a basic background because i dont understand how the gradient works, the regular.html file has the gradient though. -->
+          <span class="text-blue-400 font-bold">Andy Chen</span>
+        </h1>
+        <p class="text-lg text-green-300 font-bold">Upcoming Web Developer & Aerospace Engineer</p>
+        <p class="font-bold text-lg text-gray-400">
+          I'm a person with immense passion for Science, STEM, and Math. I am currently enrolled in Sandra Day O'Connor High School as a Junior and will be graduating in 2026.
+        </p>
+      </div>
+      <div class="max-w-md opacity-0 animate-slide-in-right" style="animation-delay: 1s;">
+        <img src="portrait.png" alt="Andy Chen" class="w-72 h-72 rounded-full border-4 border-sky-400 shadow-lg" />
+      </div>
+    </div>
+    
+    <h1 class="text-center text-3xl text-green-300 mt-32 opacity-0 animate-fade-in" style="animation-delay: 2.5s;">Recent Accomplishments</h1>
+    <!-- i guess i dont need media queries here since flex wrap works perfectly fine -->
+    <div class="flex flex-wrap justify-center gap-8 mt-8 opacity-0 animate-fade-in" style="animation-delay: 3s;">
+      <div class="bg-gray-300 p-6 rounded-xl shadow-md border-2 border-green-300 text-gray-900 w-80"
+           style="animation: slideInLeft 1s forwards; animation-delay: 3s;">
+        <h2 class="text-center text-xl underline">Holiday Clock Timer</h2>
+        <p>A website where you input your event name and time and starts a countdown.</p>
+        <img src="holiday-caldendar.png" alt="Holiday Clock Timer" class="w-full h-48 mt-4 rounded-lg border-2 border-gray-400" />
+      </div>
+      <div class="bg-gray-300 p-6 rounded-xl shadow-md border-2 border-green-300 text-gray-900 w-80"
+           style="animation: slideInBottom 1s forwards; animation-delay: 3s;">
+        <h2 class="text-center text-xl underline">JS Only Web Design</h2>
+        <p>Creating a website ONLY using JavaScript.</p>
+        <img src="js-design.png" alt="JS Web Design Only" class="w-full h-48 mt-4 rounded-lg border-2 border-gray-400" />
+      </div>
+      <div class="bg-gray-300 p-6 rounded-xl shadow-md border-2 border-green-300 text-gray-900 w-80"
+           style="animation: slideInRight 1s forwards; animation-delay: 3s;">
+        <h2 class="text-center text-xl underline">Business Partner Project</h2>
+        <p>A website designed as a fictional business with a partner.</p>
+        <img src="ford-business.png" alt="Business Project" class="w-full h-48 mt-4 rounded-lg border-2 border-gray-400" />
+      </div>
+    </div>
+    
+    <h1 class="text-center text-3xl text-green-300 mt-32 opacity-0 animate-fade-in" style="animation-delay: 4s;">Contact Me!</h1>
+    <section id="contact-navigate" class="w-full p-6 flex flex-col items-center animate-fade-in opacity-0" style="animation-delay: 4s;">
+      <form class="w-full max-w-lg flex flex-col items-center">
+        <input type="text" placeholder="Your Name" class="w-full md:w-96 p-3 mb-4 bg-gray-800 text-white rounded-md"/>
+        <input type="email" placeholder="Your Email" class="w-full md:w-96 p-3 mb-4 bg-gray-800 text-white rounded-md"/>
+        <textarea placeholder="Your Message" class="w-full md:w-96 p-3 mb-4 bg-gray-800 text-white rounded-md h-32 resize-none"></textarea>
+        <button type="submit" class="bg-blue-500 text-white p-4 rounded-md hover:bg-blue-600 transition duration-300">Send Message</button>
+      </form>
+    </section>
+    
+  </main>
+  
+  <!-- Footer -->
+  <footer class="flex flex-col justify-center items-center h-32 bg-gray-800 text-gray-500 mt-32">
+    © 2025 Andy Chen <br>
+    <div class="flex gap-6 mt-4">
+      <a href="#" class="text-gray-500 hover:text-gray-400 underline">About</a>
+      <a href="#" class="text-gray-500 hover:text-gray-400 underline">Achievements</a>
+      <a href="#contact-navigate" class="text-gray-500 hover:text-gray-400 underline">Contact Information</a>
+      <a href="#" class="text-gray-500 hover:text-gray-400 underline">Resume</a>
+    </div>
+  </footer>
+</body>
+</html>
